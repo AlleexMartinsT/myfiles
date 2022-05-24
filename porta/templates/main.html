@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+   <title>Servidor da porta</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<center>
+<body>
+   <h1>Servidor da Porta</h1>
+   {% for pin in pins %}
+   <h2>{{ pins[pin].name }}<h2>
+   {% if pins[pin].state == true %}
+      <div class="row"><div class="col-md-2">
+      <a href="/{{pin}}/open" class="w3-button w3-black" role="button">Abrir</a></div></div>
+   {% endif %}
+   {% endfor %}
+</body>
+</center>
+</html>
